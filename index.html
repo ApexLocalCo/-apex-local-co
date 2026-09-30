@@ -1,0 +1,850 @@
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Apex Local Co. | Inland Empire Marketing</title>
+
+<meta name="description" content="Apex Local Co. helps Inland Empire businesses get found, generate leads, and grow.">
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #080808;
+  color: #fff;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  width: 92%;
+  max-width: 1150px;
+  margin: auto;
+}
+
+/* NAVIGATION */
+
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(8,8,8,.95);
+  border-bottom: 1px solid #242424;
+}
+
+.nav-container {
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+.logo span {
+  color: #e5b84b;
+}
+
+.nav-links {
+  display: flex;
+  gap: 28px;
+  color: #bbb;
+  font-size: 14px;
+}
+
+.nav-links a:hover {
+  color: #e5b84b;
+}
+
+/* BUTTONS */
+
+.button {
+  display: inline-block;
+  padding: 14px 22px;
+  border-radius: 8px;
+  background: #e5b84b;
+  color: #111;
+  font-weight: 800;
+  border: none;
+  cursor: pointer;
+}
+
+.button:hover {
+  opacity: .85;
+}
+
+.button-outline {
+  background: transparent;
+  color: white;
+  border: 1px solid #444;
+}
+
+/* HERO */
+
+.hero {
+  padding: 120px 0 110px;
+  background: radial-gradient(
+    circle at 75% 30%,
+    #3a2d0e,
+    transparent 40%
+  );
+}
+
+.eyebrow {
+  color: #e5b84b;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.hero h1 {
+  font-size: clamp(50px, 9vw, 90px);
+  line-height: .95;
+  margin: 20px 0;
+}
+
+.hero h1 span {
+  color: #e5b84b;
+}
+
+.hero p {
+  max-width: 650px;
+  color: #aaa;
+  font-size: 19px;
+  margin-bottom: 30px;
+}
+
+.buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* SECTIONS */
+
+section {
+  padding: 90px 0;
+  border-top: 1px solid #202020;
+}
+
+h2 {
+  font-size: 44px;
+  line-height: 1.1;
+  margin: 10px 0 15px;
+}
+
+.section-description {
+  max-width: 680px;
+  color: #999;
+}
+
+/* SERVICES */
+
+.services {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-top: 45px;
+}
+
+.card {
+  background: #111;
+  border: 1px solid #252525;
+  border-radius: 14px;
+  padding: 28px;
+}
+
+.card-number {
+  color: #e5b84b;
+  font-weight: 900;
+  font-size: 13px;
+}
+
+.card h3 {
+  font-size: 21px;
+  margin: 8px 0;
+}
+
+.card p {
+  color: #999;
+}
+
+/* APEX SYSTEM */
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  margin-top: 45px;
+}
+
+.step {
+  background: #111;
+  padding: 25px;
+  border-left: 2px solid #e5b84b;
+}
+
+.step-number {
+  color: #e5b84b;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.step h3 {
+  margin: 7px 0;
+}
+
+.step p {
+  color: #999;
+}
+
+/* PRICING */
+
+.pricing {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-top: 45px;
+}
+
+.price-card {
+  background: #111;
+  border: 1px solid #292929;
+  border-radius: 15px;
+  padding: 30px;
+}
+
+.popular {
+  border-color: #e5b84b;
+}
+
+.popular-label {
+  color: #e5b84b;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+.price-card h3 {
+  font-size: 25px;
+  margin-top: 8px;
+}
+
+.price {
+  font-size: 38px;
+  font-weight: 900;
+  margin: 10px 0 15px;
+}
+
+.price small {
+  font-size: 14px;
+  color: #888;
+}
+
+.price-card p {
+  color: #999;
+}
+
+.price-card ul {
+  list-style: none;
+  margin: 20px 0 28px;
+  color: #bbb;
+}
+
+.price-card li {
+  margin: 10px 0;
+}
+
+.price-card li::before {
+  content: "✓";
+  color: #e5b84b;
+  margin-right: 8px;
+}
+
+/* AUDIT */
+
+.audit-box {
+  margin-top: 40px;
+  max-width: 750px;
+  background: #111;
+  border: 1px solid #292929;
+  border-radius: 18px;
+  padding: 35px;
+}
+
+form {
+  display: grid;
+  gap: 14px;
+  margin-top: 20px;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #333;
+  background: #080808;
+  color: white;
+  font-family: Arial, sans-serif;
+  font-size: 15px;
+}
+
+textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* FOOTER */
+
+footer {
+  border-top: 1px solid #222;
+  padding: 45px 0;
+  color: #777;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.footer-title {
+  color: white;
+  font-weight: 900;
+}
+
+.email {
+  color: #e5b84b;
+}
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+
+  .nav-links {
+    display: none;
+  }
+
+  .services,
+  .pricing {
+    grid-template-columns: 1fr;
+  }
+
+  .steps {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .hero {
+    padding: 80px 0;
+  }
+
+  h2 {
+    font-size: 35px;
+  }
+}
+
+@media (max-width: 500px) {
+
+  .steps {
+    grid-template-columns: 1fr;
+  }
+
+  .audit-box {
+    padding: 23px;
+  }
+
+  .hero h1 {
+    font-size: 55px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<nav>
+  <div class="container nav-container">
+
+    <a href="#" class="logo">
+      APEX <span>LOCAL CO.</span>
+    </a>
+
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#system">System</a>
+      <a href="#pricing">Plans</a>
+      <a href="#audit">Free Audit</a>
+    </div>
+
+    <a href="#audit" class="button">
+      Free Audit
+    </a>
+
+  </div>
+</nav>
+
+
+<!-- HERO -->
+
+<header class="hero">
+
+  <div class="container">
+
+    <div class="eyebrow">
+      Apex Local Co. • Inland Empire
+    </div>
+
+    <h1>
+      Go Local.<br>
+      <span>Go Apex.</span>
+    </h1>
+
+    <p>
+      We help local businesses get found, generate leads,
+      and turn those leads into real customers through
+      smarter marketing systems.
+    </p>
+
+    <div class="buttons">
+
+      <a href="#audit" class="button">
+        Get a Free Marketing Audit
+      </a>
+
+      <a href="#services" class="button button-outline">
+        See What We Do
+      </a>
+
+    </div>
+
+  </div>
+
+</header>
+
+
+<!-- SERVICES -->
+
+<section id="services">
+
+  <div class="container">
+
+    <div class="eyebrow">
+      What We Do
+    </div>
+
+    <h2>
+      Marketing built around getting customers.
+    </h2>
+
+    <p class="section-description">
+      We don't just run ads or build websites.
+      We build a system that helps more people find
+      your business, contact you, and take the next step.
+    </p>
+
+    <div class="services">
+
+      <div class="card">
+        <div class="card-number">01</div>
+        <h3>Advertising</h3>
+        <p>
+          Local Google and Meta campaigns designed
+          to reach people looking for what you offer.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="card-number">02</div>
+        <h3>Websites & Landing Pages</h3>
+        <p>
+          Clean, modern pages focused on calls,
+          quote requests, and bookings.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="card-number">03</div>
+        <h3>Lead Follow-Up</h3>
+        <p>
+          Organized, permission-based follow-up
+          so qualified opportunities don't get forgotten.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="card-number">04</div>
+        <h3>SMS & Email</h3>
+        <p>
+          Customer communication and re-engagement
+          built around consent and useful messaging.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="card-number">05</div>
+        <h3>Local Growth</h3>
+        <p>
+          Improve your online presence and make it
+          easier for local customers to take action.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="card-number">06</div>
+        <h3>Monthly Reporting</h3>
+        <p>
+          Clear reporting on leads, ad performance,
+          website activity, and next steps.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- APEX SYSTEM -->
+
+<section id="system">
+
+  <div class="container">
+
+    <div class="eyebrow">
+      The Apex System
+    </div>
+
+    <h2>
+      From being found to getting booked.
+    </h2>
+
+    <div class="steps">
+
+      <div class="step">
+        <div class="step-number">01 • ATTRACT</div>
+        <h3>Get Found</h3>
+        <p>
+          Reach local people through search,
+          social, and a stronger online presence.
+        </p>
+      </div>
+
+      <div class="step">
+        <div class="step-number">02 • CAPTURE</div>
+        <h3>Generate Leads</h3>
+        <p>
+          Send interested people to focused pages
+          that make contacting you simple.
+        </p>
+      </div>
+
+      <div class="step">
+        <div class="step-number">03 • FOLLOW UP</div>
+        <h3>Stay Connected</h3>
+        <p>
+          Organize timely follow-up so qualified
+          opportunities stay engaged.
+        </p>
+      </div>
+
+      <div class="step">
+        <div class="step-number">04 • GROW</div>
+        <h3>Measure & Improve</h3>
+        <p>
+          Track performance and use the data
+          to make the next month smarter.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- PRICING -->
+
+<section id="pricing">
+
+  <div class="container">
+
+    <div class="eyebrow">
+      Simple Monthly Plans
+    </div>
+
+    <h2>
+      Choose the level that fits your growth.
+    </h2>
+
+    <p class="section-description">
+      Advertising spend is separate and goes toward
+      the advertising platforms.
+    </p>
+
+    <div class="pricing">
+
+      <div class="price-card">
+
+        <h3>Launch</h3>
+
+        <div class="price">
+          $750 <small>/ month</small>
+        </div>
+
+        <p>
+          A strong marketing foundation.
+        </p>
+
+        <ul>
+          <li>Website / landing-page improvements</li>
+          <li>Local marketing setup</li>
+          <li>Lead capture strategy</li>
+          <li>Basic follow-up system</li>
+          <li>Monthly report</li>
+        </ul>
+
+        <a href="#audit" class="button button-outline">
+          Start a Conversation
+        </a>
+
+      </div>
+
+
+      <div class="price-card popular">
+
+        <div class="popular-label">
+          Most Popular
+        </div>
+
+        <h3>Growth</h3>
+
+        <div class="price">
+          $1,500 <small>/ month</small>
+        </div>
+
+        <p>
+          Our core package for businesses ready
+          to generate more qualified leads.
+        </p>
+
+        <ul>
+          <li>Everything in Launch</li>
+          <li>Google + Meta ad management</li>
+          <li>Dedicated landing pages</li>
+          <li>SMS & email campaigns</li>
+          <li>Lead follow-up system</li>
+          <li>Detailed monthly reporting</li>
+        </ul>
+
+        <a href="#audit" class="button">
+          Get Your Free Audit
+        </a>
+
+      </div>
+
+
+      <div class="price-card">
+
+        <h3>Apex</h3>
+
+        <div class="price">
+          $2,500 <small>/ month</small>
+        </div>
+
+        <p>
+          A fuller marketing system for businesses
+          investing more heavily in growth.
+        </p>
+
+        <ul>
+          <li>Everything in Growth</li>
+          <li>Expanded campaign management</li>
+          <li>Additional landing pages</li>
+          <li>Advanced re-engagement</li>
+          <li>More frequent optimization</li>
+          <li>Expanded strategy & reporting</li>
+        </ul>
+
+        <a href="#audit" class="button button-outline">
+          Talk With Apex
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- FREE MARKETING AUDIT -->
+
+<section id="audit">
+
+  <div class="container">
+
+    <div class="eyebrow">
+      Free Marketing Audit
+    </div>
+
+    <h2>
+      Let's find your next opportunity.
+    </h2>
+
+    <p class="section-description">
+      Tell us a little about your business.
+      We'll look at your current marketing, identify
+      opportunities, and show you what Apex Local Co.
+      could improve.
+    </p>
+
+    <div class="audit-box">
+
+      <form
+        action="https://formspree.io/f/xnpnwlyw"
+        method="POST"
+      >
+
+        <input
+          type="text"
+          name="name"
+          placeholder="Your name"
+          required
+        >
+
+        <input
+          type="email"
+          name="email"
+          placeholder="Business email"
+          required
+        >
+
+        <input
+          type="text"
+          name="business"
+          placeholder="Business name"
+          required
+        >
+
+        <select name="business_type" required>
+
+          <option value="">
+            What type of business do you have?
+          </option>
+
+          <option>Home Services</option>
+          <option>Automotive</option>
+          <option>Beauty & Wellness</option>
+          <option>Professional Services</option>
+          <option>Restaurant / Food</option>
+          <option>Other</option>
+
+        </select>
+
+        <input
+          type="tel"
+          name="phone"
+          placeholder="Phone number (optional)"
+        >
+
+        <textarea
+          name="message"
+          placeholder="Tell us anything you'd like us to know (optional)"
+        ></textarea>
+
+        <input
+          type="hidden"
+          name="_subject"
+          value="New Apex Local Co. Free Marketing Audit Request"
+        >
+
+        <button
+          type="submit"
+          class="button"
+        >
+          Request My Free Audit
+        </button>
+
+      </form>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+  <div class="container footer-container">
+
+    <div>
+
+      <div class="footer-title">
+        APEX LOCAL CO.
+      </div>
+
+      <div>
+        Go Local. Go Apex.
+      </div>
+
+      <br>
+
+      <div>
+        Founded by Jose • Inland Empire, California
+      </div>
+
+    </div>
+
+    <div>
+
+      <a
+        class="email"
+        href="mailto:apexlocalcompany@gmail.com"
+      >
+        apexlocalcompany@gmail.com
+      </a>
+
+      <br><br>
+
+      Instagram • TikTok
+
+    </div>
+
+  </div>
+
+</footer>
+
+</body>
+</html>
