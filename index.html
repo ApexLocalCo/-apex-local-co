@@ -743,12 +743,12 @@
       <h2>See what your local growth could look like.</h2>
 
       <div class="audit-box reveal">
-        <form>
-          <input type="text" placeholder="Business name" />
-          <input type="text" placeholder="Your name" />
-          <input type="email" placeholder="Email address" />
-          <select>
-            <option>Business type</option>
+        <form action="https://formspree.io/f/xnpnwlyw" method="POST">
+          <input type="text" name="business_name" placeholder="Business name" required />
+          <input type="text" name="your_name" placeholder="Your name" required />
+          <input type="email" name="email" placeholder="Email address" required />
+          <select name="business_type" required>
+            <option value="">Business type</option>
             <option>Home Services</option>
             <option>Medical</option>
             <option>Legal</option>
@@ -756,7 +756,7 @@
             <option>Retail</option>
             <option>Other</option>
           </select>
-          <textarea placeholder="Tell us a little about your goals, current marketing, and where you're getting stuck."></textarea>
+          <textarea name="goals" placeholder="Tell us a little about your goals, current marketing, and where you're getting stuck." required></textarea>
           <button type="submit" class="button">Request My Free Audit</button>
         </form>
       </div>
